@@ -8,6 +8,7 @@
 
 ## 진행 과정  
 1. 웹 크롤링을 통해 뷰티 태그의 인스타그램 데이터를 수집(1000명의 뷰티 인플루언서에 대한 12 features) 
+
 2. 데이터 전처리
 2. 데이터 탐색(Data Exploration)
 3. data exploration을 통해 도출한 결과를 바탕으로 파생변수 생성 및 Clustering feature 선택
