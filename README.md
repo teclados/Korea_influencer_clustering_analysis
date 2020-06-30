@@ -13,12 +13,14 @@
 2. 데이터 탐색(Data Exploration)
 3. data exploration을 통해 도출한 결과를 바탕으로 파생변수 생성 및 Clustering feature 선택
 4. Clustering 진행
--알고리즘 선택 및 모델 수립  
--elbow 확인  
--evaluation(Silhouette coefficient)  
--군집 수 조절  
--한계 파악 및 알고리즘 재선택  
--위 과정을 반복하며 최적 군집 도출  
+
+- 알고리즘 선택 및 모델 수립  
+- elbow 확인  
+- evaluation(Silhouette coefficient)  
+- 군집 수 조절  
+- 한계 파악 및 알고리즘 재선택  
+- 위 과정을 반복하며 최적 군집 도출  
+
 5. 인플루언서 군집 정의  
 
 ## 결과
