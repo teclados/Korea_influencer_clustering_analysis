@@ -106,5 +106,19 @@
 
 ## 파일 구성  
 
-
-
+- Influencer_crawler
+  - beauty_influencer_account.csv: 뷰티 인플루언서 계정 데이터
+  - beauty_basic_info.csv: 뷰티 인플루언서 기본 변수 포함 데이터
+  - beauty_post_info.csv: 뷰티 인플루언서 게시물 관련 데이터
+  - final_beauty_dataset.csv: basic과 post 정보 병합 데이터
+  - data_merge.py: 데이터 셋 병합
+  - inflencer_1000_crawler.py: 인플루언서 계정 크롤링
+  - influencer_basic_crawler.py: 인플루언서 기본 변수 크롤링
+  - influencer_post_crawler.py: 인플루언서 게시물 정보 크롤링
+  
+- Clustering
+  - beauty_data_extend.csv: 최종 데이터(파생변수 포함)
+  - DC_static_analysis.ipynb: 데이터 탐색 및 파생변수 도출
+  - DC_K_means.ipynb: K-means 및 실루엣 지수
+  - DC_K_medoids.ipynb: K-medoids
+  - DC_K_Hierarchical_clustering.ipynb: Hierarchical clustering 및 군집 정의
