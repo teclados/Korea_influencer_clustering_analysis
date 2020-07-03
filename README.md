@@ -100,12 +100,12 @@
 - 인플루언서의 follower들의 잠재 구매력을 대표하는 active_rate와 인플루언서의 게시물에 반응하는, 잠재 구매력에 대한 신뢰성을 나타내는 ER의 두 개의 feature로 K-means, K-medoids, 계층 군집 분석(Hierarchical Clustering)을 진행하였다. 그 중 가장 적절하다고 판단한 계층 군집 분석의 6개의 군집을 분석해본 결과, 아래와 같은 군집들로 정의할 수 있다.
 
 
-- Highest benefit: follower들의 잠재 구매력과 신뢰도 모두 높은 군집  
-- Low Cost High benefit: follower들의 잠재 구매력은 매우 높지만 신뢰도가 낮은 군집  
-- High Interactive: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 높은 군집  
-- Middle benefit: follower들의 잠재 구매력은 중간 정도이며 신뢰가 낮은 군집  
-- middle Interactive: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 중간인 군집  
-- Lowest benefit: follower들의 잠재 구매력과 신뢰도 모두 낮은 군집  
+  - Highest benefit: follower들의 잠재 구매력과 신뢰도 모두 높은 군집  
+  - Low Cost High benefit: follower들의 잠재 구매력은 매우 높지만 신뢰도가 낮은 군집  
+  - High Interactive: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 높은 군집  
+  - Middle benefit: follower들의 잠재 구매력은 중간 정도이며 신뢰가 낮은 군집  
+  - middle Interactive: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 중간인 군집  
+  - Lowest benefit: follower들의 잠재 구매력과 신뢰도 모두 낮은 군집  
 
 
 - 단순히 follower 수로 메가, 매크로, 마이크로, 나노로 구분하지 않고 마케팅 측면에서의 인사이트를 위해 각 인플루언서 팔로워의 실질적인 구매력을 바탕으로 군집을 나누고 정의를 하였다. 총 6개의 군집이 존재하고, 각 군집은 계층적으로 구성된다.
