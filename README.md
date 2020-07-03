@@ -61,35 +61,39 @@
    
    
 3) Hierarchical clustering  
-  - 유클리드 거리, 최단연결법, 병합방식 세팅.   
-  - Threshold를 20, 25, 30으로 설정해서 cluster 수를 6, 4, 3으로 정해서 확인.  
-  - K = 6 결과가 가장 적절하다고 판단.  
+   - 유클리드 거리, 최단연결법, 병합방식 세팅.   
+   - Threshold를 20, 25, 30으로 설정해서 cluster 수를 6, 4, 3으로 정해서 확인.  
+   - K = 6 결과가 가장 적절하다고 판단.  
   ![image](https://user-images.githubusercontent.com/33457632/86476869-505ea700-bd82-11ea-82f2-7ff5293885bf.png)  
-  - K = 6 뿐만 아니라 K = 4, 3 모두 K-means, K-medoids에 비해 outlier에 대한 분리를 가장 잘한다. 인플루언서 데이터 셋에서 outlier는 중요한 instance이기 때문에 이를 가장 잘 반영하는 Hierarchical clustering이 세 모델 중 최적의 모델이라고 판단.  
+   - K = 6 뿐만 아니라 K = 4, 3 모두 K-means, K-medoids에 비해 outlier에 대한 분리를 가장 잘한다. 인플루언서 데이터 셋에서 outlier는 중요한 instance이기 때문에 이를 가장 잘 반영하는 Hierarchical clustering이 세 모델 중 최적의 모델이라고 판단.  
   
 
 
 ### 군집 구성
-- 가장 적절하다고 판단한 Hierarchical clustering의 군집 수 6개.
-- cluster 0: ER에 비해 active_rate 월등히 높음 – 3  
-- cluster 1: ER과 active_rate 모두 월등히 높음 – 1  
-- cluster 2: ER과 active_rate 모두 낮음 – 856  
-- cluster 3: ER에 비해 active_rate 높음 – 24  
-- cluster 4: active_rate에 비해 ER 높음 – 38  
-- cluster 5: active_rate에 비해 ER 월등히 높음 – 7  
+- 가장 적절하다고 판단한 Hierarchical clustering의 군집 수 6개.  
 
-![image](https://user-images.githubusercontent.com/33457632/86477128-c5ca7780-bd82-11ea-8d98-3667e23e465b.png)
+
+  - cluster 0: ER에 비해 active_rate 월등히 높음 – 3  
+  - cluster 1: ER과 active_rate 모두 월등히 높음 – 1  
+  - cluster 2: ER과 active_rate 모두 낮음 – 856  
+  - cluster 3: ER에 비해 active_rate 높음 – 24  
+  - cluster 4: active_rate에 비해 ER 높음 – 38  
+  - cluster 5: active_rate에 비해 ER 월등히 높음 – 7  
+
+  ![image](https://user-images.githubusercontent.com/33457632/86477128-c5ca7780-bd82-11ea-8d98-3667e23e465b.png)
 
 
 ### 군집 정의  
 - ER은 follower 대비 좋아요와 댓글 합의 비율이고, active_rate은 좋아요 대비 댓글의 비율이므로, active_rate 을 실질적인 follower들의 잠재 구매력, ER은 그 구매력에 대한 신뢰도를 나타낸다.  
 - cluster의 계층을 나눠보면, 1 -> 0 -> 5 -> 3 -> 4 -> 2 로 구분된다.  
-- cluster1: follower들의 잠재 구매력과 신뢰도 모두 높은 군집  
-- cluster0: follower들의 잠재 구매력은 매우 높지만 신뢰도가 낮은 군집  
-- cluster5: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 높은 군집  
-- cluster3: follower들의 잠재 구매력은 중간 정도이며 신뢰가 낮은 군집  
-- cluster4: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 중간인 군집  
-- cluster2: follower들의 잠재 구매력과 신뢰도 모두 낮은 군집  
+
+
+  - cluster1: follower들의 잠재 구매력과 신뢰도 모두 높은 군집  
+  - cluster0: follower들의 잠재 구매력은 매우 높지만 신뢰도가 낮은 군집  
+  - cluster5: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 높은 군집  
+  - cluster3: follower들의 잠재 구매력은 중간 정도이며 신뢰가 낮은 군집  
+  - cluster4: follower들의 잠재 구매력은 매우 낮지만 신뢰도가 중간인 군집  
+  - cluster2: follower들의 잠재 구매력과 신뢰도 모두 낮은 군집  
   
 ## 결론  
 
