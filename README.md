@@ -45,13 +45,18 @@
 1) K-means  
    - K = 3 ~ 8 결과 비교, 평균 silhouette값 및 편차 확인.  
    - K = 4 결과가 가장 적절하다고 판단.  
+   ![image](https://user-images.githubusercontent.com/33457632/86476719-08d81b00-bd82-11ea-8417-20090a9841ba.png)
+   ![image](https://user-images.githubusercontent.com/33457632/86476750-17263700-bd82-11ea-8cfa-1ab56b97fb0a.png)  
    - 한계점: Random initial centroid, outlier 처리 불가능, Data exploration에서 확인한 유의미한 outlier 반영하지 못함.  
    
    
 2) K-medoids  
    - K = 3, 4, 5 결과 비교, K-means 클러스터 산포도와 비교.  
    - K = 3 결과가 가장 적절하다고 판단.  
+   ![image](https://user-images.githubusercontent.com/33457632/86476784-2907da00-bd82-11ea-9a8b-fecee45a520b.png)  
    - K-means(K=4)와 비교.  
+   ![image](https://user-images.githubusercontent.com/33457632/86476828-38872300-bd82-11ea-82f3-2c41138f0ede.png)
+   ![image](https://user-images.githubusercontent.com/33457632/86476849-42a92180-bd82-11ea-9dc6-76c03a1bda3b.png)  
    - 한계점: K-means와 비교했을 때, random initial centroid 문제는 해결되었지만 outlier에 대해서는 오히려 더 적절하지 않은 cluster 생성.  
    
    
@@ -59,9 +64,15 @@
   - 유클리드 거리, 최단연결법, 병합방식 세팅.   
   - Threshold를 20, 25, 30으로 설정해서 cluster 수를 6, 4, 3으로 정해서 확인.  
   - K = 6 결과가 가장 적절하다고 판단.  
+  ![image](https://user-images.githubusercontent.com/33457632/86476869-505ea700-bd82-11ea-82f2-7ff5293885bf.png)  
   - K = 6 뿐만 아니라 K = 4, 3 모두 K-means, K-medoids에 비해 outlier에 대한 분리를 가장 잘한다. 인플루언서 데이터 셋에서 outlier는 중요한 instance이기 때문에 이를 가장 잘 반영하는 Hierarchical clustering이 세 모델 중 최적의 모델이라고 판단.  
   
 4) 세 모델의 산포도 비교  
+<K-means>             <K-medoids>             <HC>  
+![image](https://user-images.githubusercontent.com/33457632/86476898-5fddf000-bd82-11ea-8ad4-066d532cceb1.png)
+![image](https://user-images.githubusercontent.com/33457632/86476915-68cec180-bd82-11ea-993c-586081409c4a.png)
+![image](https://user-images.githubusercontent.com/33457632/86476931-6ff5cf80-bd82-11ea-8165-cf1ad8ab3a42.png)  
+
 
 
 ### 군집 구성 feature 확인  
@@ -74,6 +85,9 @@
 - cluster 3: ER에 비해 active_rate 높음 – 24  
 - cluster 4: active_rate에 비해 ER 높음 – 38  
 - cluster 5: active_rate에 비해 ER 월등히 높음 – 7  
+
+![image](https://user-images.githubusercontent.com/33457632/86477128-c5ca7780-bd82-11ea-8d98-3667e23e465b.png)
+
 
 ### 군집 정의  
 - ER은 follower 대비 좋아요와 댓글 합의 비율이고, active_rate은 좋아요 대비 댓글의 비율이므로, active_rate 을 실질적인 follower들의 잠재 구매력, ER은 그 구매력에 대한 신뢰도를 나타낸다.  
